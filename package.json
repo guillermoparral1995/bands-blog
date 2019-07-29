@@ -1,0 +1,23 @@
+{
+  "name": "bands-blog",
+  "version": "1.0.0",
+  "description": "A simple blog about bands to practice for the Google Mobile Web Specialist Certificate exam",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"There are no tests for this project.\"",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillermoparral1995/bands-blog.git"
+  },
+  "author": "Guillermo Parral",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guillermoparral1995/bands-blog/issues"
+  },
+  "homepage": "https://github.com/guillermoparral1995/bands-blog#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
