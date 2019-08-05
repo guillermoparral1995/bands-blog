@@ -1,0 +1,65 @@
+body{
+    font-family: Arial, serif;
+    max-width: 1280px;
+    margin: 20px auto;
+}
+
+@media(max-width: 767px){
+    body{
+        margin: 20px;
+    }
+}
+
+.decade-header{
+    padding: 20px;
+    text-align: center;
+}
+
+main{
+    display: grid;
+    grid: 30% 70% / 1fr 1fr 1fr;
+    grid-template-areas: "header header header"
+                         "body body body";
+    gap: 10px;
+}
+
+@media(max-width: 1023px){
+    body{
+        padding: 20px;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article{
+        text-align: center;
+    }
+
+    .band-img-container{
+        margin: 0 auto;
+    }
+
+    .band-body{
+        text-align: justify;
+    }
+}
+
+.band-header{
+    grid-area: header;
+}
+
+.band-img-container{
+    width: 200px;
+}
+
+.band-img-container img{
+    width: 100%;
+}
+
+.band-body{
+    grid-area: body;
+}
+
