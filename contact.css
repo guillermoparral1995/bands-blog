@@ -1,0 +1,11 @@
+body{
+    font-family: Arial, serif;
+    max-width: 1280px;
+    margin: 20px auto;
+}
+
+@media(max-width: 767px){
+    body{
+        margin: 20px;
+    }
+}

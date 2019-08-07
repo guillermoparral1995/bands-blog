@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Contactame - Blog de bandas!</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+<header>
+    <h1>Blog de bandas!</h1>
+    <h4>Llená la info de abajo y prometo contactarte lo más pronto que pueda para compartir más música!</h4>
+</header>
+    <form>
+        <fieldset>
+            <legend>Información personal</legend>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Cosme" required autocomplete="name">
+            <label for="surname">Apellido</label>
+            <input type="text" id="surname" name="surname" placeholder="Fulanito" required autocomplete="family-name">
+            <label for="age">Fecha de nacimiento</label>
+            <input type="date" id="age" name="age">
+            <label for="country">País</label>
+            <input type="text" id="country" name="country" list="countries">
+            <datalist id="countries">
+                <option value="Argentina">Argentina</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="República Dominicana">República Dominicana</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Honduras">Honduras</option>
+                <option value="México">México</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Panamá">Panamá</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Perú">Perú</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Venezuela">Venezuela</option>
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Información de contacto</legend>
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="username@username.com" required autocomplete="email">
+            <label for="mobile">Celular</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="+54 011 9 6756 4420" required autocomplete="tel">
+            <label for="phone">Teléfono fijo</label>
+            <input type="tel" id="phone" name="phone" placeholder="+54 011 4505 0306">
+        </fieldset>
+        <fieldset>
+            <legend>Gustos musicales</legend>
+            <label for="styles">Estilos favoritos</label>
+            <select id="styles" name="styles">
+                <option value="classic">Rock clásico</option>
+                <option value="alternative">Rock alternativo</option>
+                <option value="indie">Indie rock</option>
+                <option value="punk">Punk</option>
+                <option value="psychedelic">Rock psicodélico</option>
+                <option value="grunge">Grunge</option>
+                <option value="folk">Folk rock</option>
+                <option value="glam">Glam</option>
+                <option value="metal">Metal</option>
+                <option value="shoegaze">Shoegaze</option>
+            </select>
+            <div>Formatos favoritos
+                <label for="cd">CD</label>
+                <input type="radio" name="format" id="cd">
+                <label for="vinyl">Vinilo</label>
+                <input type="radio" name="format" id="vinyl">
+                <label for="cassette">Cassette</label>
+                <input type="radio" name="format" id="cassette">
+                <label for="streaming">Streaming</label>
+                <input type="radio" name="format" id="streaming">
+            </div>
+            <div></div>
+        </fieldset>
+    </form>
+<footer>
+    <a href="index.html">Volver al menú principal</a>
+</footer>
+</body>
+</html>
