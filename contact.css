@@ -9,3 +9,53 @@ body{
         margin: 20px;
     }
 }
+
+fieldset {
+    margin-bottom: 20px;
+}
+
+input:not([name="format"]), select{
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+}
+
+.form-row{
+    display: flex;
+    text-align: center;
+}
+
+.form-row:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.form-row label{
+    width: 100px;
+    margin-right: 10px;
+    line-height: 30px;
+}
+
+.form-row input{
+    margin-right: 20px;
+}
+
+.form-row input:not([name="format"]):not(".country-code"){
+    flex: 2;
+}
+
+.form-row input[name="email"]{
+    flex:3;
+}
+
+.form-row input.country-code{
+    width: 50px;
+}
+
+.form-row .placeholder{
+    flex: 6;
+}
+
+.form-row .email-placeholder{
+    flex: 7;
+}
