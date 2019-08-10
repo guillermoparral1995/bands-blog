@@ -60,11 +60,14 @@ self.addEventListener('fetch', (event) => {
                     console.log(event.request.url);
                     return caches.match('404.html');
                 }
-                return caches.open(cacheName).then(cache => {
-                    console.log('Fetched succesfully. Storing in cache...');
-                    cache.put(event.request, response.clone());
-                    return response;
-                })
+                if(event.request.method === 'GET'){
+                    return caches.open(cacheName).then(cache => {
+                        console.log('Fetched succesfully. Storing in cache...');
+                        cache.put(event.request, response.clone());
+                        return response;
+                    })
+                }
+                return response;
             })).catch(error => {
                 console.error('There was an error while fetching: ', error);
                 return caches.match('offline.html');

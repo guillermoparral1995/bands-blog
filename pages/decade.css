@@ -16,11 +16,16 @@ body{
 }
 
 main{
-    display: grid;
-    grid: 30% 70% / 1fr 1fr 1fr;
-    grid-template-areas: "header header header"
-                         "body body body";
-    gap: 10px;
+    display: flex;
+}
+
+article{
+    flex: 1;
+    margin: 0 10px;
+}
+
+.band-header{
+    text-align: center;
 }
 
 @media(max-width: 1023px){
@@ -29,7 +34,6 @@ main{
     }
 
     main{
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
@@ -47,19 +51,12 @@ main{
     }
 }
 
-.band-header{
-    grid-area: header;
-}
-
 .band-img-container{
     width: 200px;
+    margin: 0 auto;
 }
 
 .band-img-container img{
     width: 100%;
-}
-
-.band-body{
-    grid-area: body;
 }
 

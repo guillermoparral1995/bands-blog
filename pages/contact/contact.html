@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Un blog para fans del rock y la música en general">
+    <meta charset="UTF-8">
+    <title>Contactame - Blog de bandas!</title>
+    <link rel="stylesheet" href="contact.css" type="text/css">
+
+</head>
+<body>
+<header>
+    <h1>Blog de bandas!</h1>
+    <h4>Llená la info de abajo y prometo contactarte lo más pronto que pueda para compartir más música!</h4>
+</header>
+    <form method="post">
+        <fieldset id="personal-info">
+            <legend>Información personal</legend>
+            <div class="form-row">
+                <label id="name-label" for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Ej.: Cosme" maxlength="30" required autocomplete="name" aria-labelledby="name-label">
+                <label id="surname-label" for="surname">Apellido</label>
+                <input type="text" id="surname" name="surname" placeholder="Ej.: Fulanito" maxlength="50" required autocomplete="family-name" aria-labelledby="surname-label">
+                <span class="placeholder"></span>
+            </div>
+            <div class="form-row">
+                <label id="date-of-birth-label" for="date-of-birth">Fecha de nacimiento</label>
+                <input type="date" id="date-of-birth" name="date-of-birth" aria-labelledby="date-of-birth-label">
+                <label id="country-label" for="country">País</label>
+                <input type="text" id="country" name="country" list="countries" aria-labelledby="country-label">
+                <datalist id="countries">
+                    <option value="Argentina">Argentina</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="República Dominicana">República Dominicana</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="México">México</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Panamá">Panamá</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Perú">Perú</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Venezuela">Venezuela</option>
+                </datalist>
+                <span class="placeholder"></span>
+            </div>
+        </fieldset>
+        <fieldset id="contact-info">
+            <legend>Información de contacto</legend>
+            <div class="form-row">
+                <label id="email-label" for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Ej.: username@username.com" required autocomplete="email" aria-labelledby="email-label">
+                <span class="email-placeholder"></span>
+            </div>
+            <div class="form-row">
+                <label id="mobile-cc-label" for="mobile-cc">Código de área</label>
+                <input class="country-code" type="tel" id="mobile-cc" name="mobile-cc" placeholder="Ej.: 54" required autocomplete="tel" aria-labelledby="mobile-cc-label">
+                <label id="mobile-label" for="mobile">Celular</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Ej.: 01167564420" required autocomplete="tel" aria-labelledby="mobile-label">
+                <label id="phone-cc-label" for="phone-cc">Código de área</label>
+                <input class="country-code" type="tel" id="phone-cc" name="phone-cc" placeholder="Ej.: 54" aria-labelledby="phone-cc-label">
+                <label id="phone-label" for="phone">Teléfono fijo</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ej.: 01145050306" aria-labelledby="phone-label">
+                <span class="placeholder"></span>
+            </div>
+        </fieldset>
+        <fieldset id="musical-info">
+            <legend>Gustos musicales</legend>
+            <div class="form-row">
+                <label id="styles-label" for="styles">Estilos favoritos</label>
+                <select id="styles" name="styles" aria-labelledby="styles-label">
+                    <option value="classic">Rock clásico</option>
+                    <option value="alternative">Rock alternativo</option>
+                    <option value="indie">Indie rock</option>
+                    <option value="punk">Punk</option>
+                    <option value="psychedelic">Rock psicodélico</option>
+                    <option value="grunge">Grunge</option>
+                    <option value="folk">Folk rock</option>
+                    <option value="glam">Glam</option>
+                    <option value="metal">Metal</option>
+                    <option value="shoegaze">Shoegaze</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label aria-label="Formatos favoritos">Formatos favoritos</label>
+                <label id="cd-label" for="cd">CD</label>
+                <input type="radio" name="format" id="cd" value="cd" aria-labelledby="cd-label">
+                <label id="vinyl-label" for="vinyl">Vinilo</label>
+                <input type="radio" name="format" id="vinyl" value="vinyl" aria-labelledby="vinyl-label">
+                <label id="cassette-label" for="cassette">Cassette</label>
+                <input type="radio" name="format" id="cassette" value="cassette" aria-labelledby="cassette-label">
+                <label id="streaming-label" for="streaming">Streaming</label>
+                <input type="radio" name="format" id="streaming" value="streaming" aria-labelledby="streaming-label">
+            </div>
+            <div class="form-row">
+                <label id="commentary-label" for="commentary">Comentario</label>
+                <textarea name="commentary" id="commentary" placeholder="Acá va tu comentario" maxlength="2000" aria-labelledby="commentary-label"></textarea>
+            </div>
+        </fieldset>
+        <input aria-label="Enviar formulario" type="submit" class="submit-btn" value="Enviar formulario!">
+    </form>
+<footer>
+    <a href="../../index.html">Volver al menú principal</a>
+</footer>
+</body>
+</html>
