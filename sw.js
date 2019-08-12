@@ -26,8 +26,9 @@ const shellFilesToCache = [
     'images/social-media/youtube.png',
     'index.html',
     'index.css',
-    '404.html',
-    'offline.html'
+    'pages/error/404.html',
+    'pages/error/offline.html',
+    'pages/error/error.css'
 ];
 
 const cacheName = 'cache-v1';
@@ -58,7 +59,7 @@ self.addEventListener('fetch', (event) => {
                 if(response.status === 404 && event.request.headers.get('accept').includes('text/html')){
                     console.log('Asset not found!');
                     console.log(event.request.url);
-                    return caches.match('404.html');
+                    return caches.match('pages/error/404.html');
                 }
                 if(event.request.method === 'GET'){
                     return caches.open(cacheName).then(cache => {
@@ -70,11 +71,11 @@ self.addEventListener('fetch', (event) => {
                 return response;
             })).catch(error => {
                 console.error('There was an error while fetching: ', error);
-                return caches.match('offline.html');
+                return caches.match('pages/error/offline.html');
             });
         }).catch(error => {
             console.error('Caches wont open. Probably offline', error);
-            return caches.match('offline.html');
+            return caches.match('pages/error/offline.html');
         })
     )
 
